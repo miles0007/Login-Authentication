@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+        body,html{
+            font-style: italic;
+        }
+        .link{
+            display: inline-block;
+        }
+        .link:hover{
+            text-decoration: none;
+            
+        }
+    </style>
+</head>
+<body>
+    
+<nav class="navbar navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand">Naturals</a>
+    <div class="form-inline">
+        <!-- <a class="link" href="{% url 'pro' %}">Premium</a> -->
+        {% if user.is_authenticated %}
+            <a class="display-4" style="color: rgb(255, 255, 255); font-size: 18px;">Hello, {{user.username}}</a>
+            <a class="link" href="{% url 'logout' %}">Logout</a>
+            <a class="link" href="{% url 'pro' %}">Premium</a>
+        {% else %}
+            <a class="btn btn-primary my-2" href="{% url 'login' %}">Login</a>
+            <a class="btn btn-primary my-2" href="{% url 'register' %}">Register</a>
+        {% endif %}
+        
+    </div>
+</nav>
+{% block content %}
+<header>
+    <div class="small col-lg-6 text-justify">
+        <div class="head">
+            <h2>Natural Fitness</h2>
+            <p>Natural Fitness has been the preferred choice for fitness holiday enthusiasts from all over the world.
+            Our luxury cottages are located in the town of Kodaikanal, perched atop the misty mountains of southern India.
+            Kodaikanal has long been the destination of celebrities from India and around the world, known for its clean air,
+            fantastic weather, and pristine lakes, waterfalls and forests. At 7000 feet above the sea level, it's an ideal location
+            for high altitude training.<br>
+            Our guests include Men, Women, Family, Teens, who come and stay with us to us for their personal fitness growth and
+            development.
+            </p>
+        </div>
+        <div class="head">
+            <h2>Natural Fitness</h2>
+            <p>Natural Fitness has been the preferred choice for fitness holiday enthusiasts from all over the world.
+                Our luxury cottages are located in the town of Kodaikanal, perched atop the misty mountains of southern India.
+                Kodaikanal has long been the destination of celebrities from India and around the world, known for its clean
+                air,
+                fantastic weather, and pristine lakes, waterfalls and forests. At 7000 feet above the sea level, it's an ideal
+                location
+                for high altitude training.<br>
+                Our guests include Men, Women, Family, Teens, who come and stay with us to us for their personal fitness growth
+                and
+                development.
+            </p>
+        </div>
+        <div class="head">
+            <h2>As Spring turns to summer</h2>
+            <p>Acrobats of the sky, martins dashed across the sweetest blue canvas with bundles of white clouds, before taking aim at
+            their nesting holes in the sandy bank. Rabbits stretched out relaxed on the soft sand, as humans do soaking up the
+            summer rays on a crowded beach. But the beach at this inland site was a bank, and the ocean a muddy puddle, with an
+            occasional lapwing wandering along the shore. I waited here for a while before continuing along the road where swallows
+            appeared wielding through the sky in their pursuit of flying insects.<br>
+            Once delightfully perched on the telephone wire they chattered away creating the sweet sound of summer. I continued to listen to the swallows’ cheery presence as I
+            scanned the lake, a graceful great-crested grebe was close by, an adult with glorious crest and russet-orange ruff. I
+            heard the strange bubbling of the little grebe nearby too, and there for a moment I saw it before this creature dived
+            and disappeared beneath the water’s surface. I scanned for kingfishers and hoped for a flash of blue, but instead I saw
+            an unexpected visitor, a Muntjac deer paddling in the shallow water nibbling leaves from the nearby bank.<br> 
+            Swans completed the serene scene as they reached their necks far into the water in search of food in the distance amongst the
+            set of the reeds.
+            </p>
+        </div>
+        <div>
+            <a href=></a>
+        </div>
+    </div>
+</header>
+</body>
+{% endblock %}
+</html>

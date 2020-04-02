@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-combined.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.js' %}">
+    <link rel="stylesheet" href="{% static 'jquery.min.js' %}">
+</head>
+
+<body>
+    <form class="form-horizontal" method="POST">
+    <fieldset>
+        <div id="legend">
+            <legend class="">Register</legend>
+        </div>
+        <div class="control-group">
+            <!-- Username -->
+            <label class="control-label" for="username">Username</label>
+            <div class="controls">
+                {{form.username}}
+                <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- E-mail -->
+            <label class="control-label" for="email">E-mail</label>
+            <div class="controls">
+                {{form.email}}
+                <p class="help-block">Please provide your E-mail</p>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Password-->
+            <label class="control-label" for="password">Password</label>
+            <div class="controls">
+                {{form.password1}}
+                <p class="help-block">Password should be at least 8 characters with include special characters.</p>
+                <p class="help-block">Not Entirerly,Numeric.And Also Common password</p>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Password -->
+            <label class="control-label" for="password_confirm">Password (Confirm)</label>
+            <div class="controls">
+                {{form.password2}}
+                <p class="help-block">Please confirm password</p>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Button -->
+            <div class="controls">
+                <button class="btn btn-success">Register</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+<script src="{% static 'bootstrap.min.js' %}"></script>
+<script src="{% static 'jquery.min.js' %}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <title>Login</title>
+    <style>
+        .register-container {
+            margin: 100px;
+        }
+
+        .in-container {
+            width: 50%;
+            height: 50%;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="register-container">
+        <div class="in-conatiner justify-text">
+            <h1>Register</h1>
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <strong>{{error.messages}}</strong>
+                <button>Register</button>
+            </form>
+            
+        </div>
+    </div>
+
+</body>
+
+</html> -->

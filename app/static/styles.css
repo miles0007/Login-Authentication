@@ -1,0 +1,17 @@
+a{
+    margin-left: 7px;
+}
+.small{
+    margin: 100px auto;
+}
+
+p{
+    font-size: medium;
+}
+.link{
+    text-decoration: none;
+    margin-right: 5px;
+}
+.link:hover{
+    text-decoration: none;
+}
